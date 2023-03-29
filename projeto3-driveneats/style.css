@@ -33,6 +33,62 @@ header {
     color: #FFFFFF;
 }
 
+.corpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: aquamarine;
+    justify-content: space-around;
+    margin-top: 92px;
+}
+
+.pratos {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 19px;
+    justify-content: space-around;
+}
+
+.titulo-pratos {
+    font-family: 'Righteous';
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.caixas-pratos {
+    width: 100%;
+    height: 216px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    background-color: lightgreen;
+    gap: 15px;
+}
+
+.caixinha-prato {
+    width: 172px;
+    height: 216px;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 0 14px;
+}
+
+.caixinha-prato img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+
+
+
 footer {
     width: 100%;
     height: 92px;
