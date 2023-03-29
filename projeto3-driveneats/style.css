@@ -16,7 +16,7 @@ header {
 .cabecalho {
     display: flex;
     flex-direction: column;
-    margin: 12px 145px 18px 21px
+    padding: 12px 145px 18px 21px;
 }
 
 .nome-restaurante {
@@ -31,4 +31,33 @@ header {
     font-weight: 400;
     font-size: 18px;
     color: #FFFFFF;
+}
+
+footer {
+    width: 100%;
+    height: 92px;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape {
+    margin: 15px 20px 15px 20px;
+}
+
+.rodape button {
+    height: 61px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 70px 12px 70px;
+    border: none;
 }
