@@ -1,0 +1,34 @@
+body {
+    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 92px;
+    background-color: #CF2B2B;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 145px 18px 21px
+}
+
+.nome-restaurante {
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 44px;
+    color: #FFFFFF;
+}
+
+.slogan-restaurante {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
