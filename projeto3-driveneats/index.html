@@ -31,7 +31,7 @@
                 Primeiro, seu prato
             </div>
             <div class="caixas">
-                <div class="caixinha">
+                <div class="frango" onclick="selecionarFrango()">
                     <img src="imagens/frango_yin_yang.png" alt="frango_yin_yang">
                     <div class="nome">
                         Frango Yin Yang
@@ -43,7 +43,7 @@
                         R$ 14,90
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="churras" onclick="selecionarChurras()">
                     <img src="imagens/churrasco.jpeg" alt="churrasco">
                     <div class="nome">
                         Churrasco Misto
@@ -55,7 +55,7 @@
                         R$ 24,90
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="peixe" onclick="selecionarPeixe()">
                     <img src="imagens/peixe.jpg" alt="peixe">
                     <div class="nome">
                         Filé de Tilápia
@@ -74,7 +74,7 @@
                 Agora, sua bebida
             </div>
             <div class="caixas">
-                <div class="caixinha">
+                <div class="coca" onclick="selecionarCoca()">
                     <img src="imagens/coca-cola.png" alt="coca-cola">
                     <div class="nome">
                         Coquinha Gelada
@@ -86,7 +86,7 @@
                         R$ 4,90
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="suco" onclick="selecionarSuco()">
                     <img src="imagens/suco.jpg" alt="suco">
                     <div class="nome">
                         Suquinho Gelado
@@ -98,7 +98,7 @@
                         R$ 6,90
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="agua" onclick="selecionarAgua()">
                     <img src="imagens/agua.jpg" alt="agua">
                     <div class="nome">
                         Aguinha Gelada
@@ -117,7 +117,7 @@
                 Por fim, sua sobremesa
             </div>
             <div class="caixas">
-                <div class="caixinha">
+                <div class="pudim" onclick="selecionarPudim()">
                     <img src="imagens/pudim.png" alt="pudim">
                     <div class="nome">
                         Pudim
@@ -129,7 +129,7 @@
                         R$ 7,90
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="mousse" onclick="selecionarMousse()">
                     <img src="imagens/mousse.jpg" alt="mousse">
                     <div class="nome">
                         Mousse de Limão
@@ -141,7 +141,7 @@
                         R$ 8,50
                     </div>
                 </div>
-                <div class="caixinha">
+                <div class="pave" onclick="selecionarPave()">
                     <img src="imagens/pave.jpg" alt="pave">
                     <div class="nome">
                         Pavê de Chocolate
@@ -158,9 +158,10 @@
     </section>
     <footer>
         <div class="rodape">
-            <button>Selecione os 3 itens para fechar o pedido</button>
+            <button id="botao">Selecione os 3 itens para fechar o pedido</button>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
