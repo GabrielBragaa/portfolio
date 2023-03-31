@@ -157,10 +157,14 @@ footer {
     border: none;
 }
 
-.selecionada {
+.prato-selecionado {
     border: solid 4px green;
 }
 
-.nao-selecionada {
-    border: none;
+.bebida-selecionada {
+    border: solid 4px green;
+}
+
+.sobremesa-selecionada {
+    border: solid 4px green;
 }
