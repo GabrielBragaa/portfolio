@@ -1,4 +1,4 @@
-let prato, precoPrato, bebida, precoBebida, sobremesa, precoSobremesa, precoTotal;
+let prato, precoPrato, bebida, precoBebida, sobremesa, precoSobremesa;
 
 
 function verificaSelecao() {
@@ -25,8 +25,8 @@ function selecionarPrato(seletor) {
     
 
     prato = seletor.querySelector('.nome').innerHTML;
-    precoPrato = seletor.querySelector('.preco').innerHTML;
-    console.log(prato, precoPrato);
+    const preco = seletor.querySelector('.preco').innerHTML;
+    precoPrato = Number(preco.replace(/[^0-9,]*/g, '').replace(',', '.')).toFixed(2);
     verificaSelecao();
 }
 
@@ -41,8 +41,8 @@ function selecionarBebida(seletor) {
     seletor.classList.toggle('selecionado');
 
     bebida = seletor.querySelector('.nome').innerHTML;
-    precoBebida = seletor.querySelector('.preco').innerHTML;
-    console.log(bebida, precoBebida);
+    const preco = seletor.querySelector('.preco').innerHTML;
+    precoBebida = Number(preco.replace(/[^0-9,]*/g, '').replace(',', '.')).toFixed(2);
     verificaSelecao();
 }
 
@@ -57,22 +57,23 @@ function selecionarSobremesa(seletor) {
     seletor.classList.toggle('selecionado');
 
     sobremesa = seletor.querySelector('.nome').innerHTML;
-    precoSobremesa = seletor.querySelector('.preco').innerHTML;
-    console.log(sobremesa, precoSobremesa);
+    const preco = seletor.querySelector('.preco').innerHTML;
+    precoSobremesa = Number(preco.replace(/[^0-9,]*/g, '').replace(',', '.')).toFixed(2);
     verificaSelecao();
 }
 
 function confirmar() {
+    const preco = Number(precoPrato) + Number(precoBebida) + Number(precoSobremesa);
     const tela = document.querySelector('.confirmacao');
     tela.classList.remove('escondido');
     tela.querySelector('.nome-prato-confirmado').innerHTML = prato;
-    tela.querySelector('.preco-prato-confirmado').innerHTML = precoPrato;
+    tela.querySelector('.preco-prato-confirmado').innerHTML = precoPrato.replace('.', ',');
     tela.querySelector('.nome-bebida-confirmada').innerHTML = bebida;
-    tela.querySelector('.preco-bebida-confirmada').innerHTML = precoBebida;
+    tela.querySelector('.preco-bebida-confirmada').innerHTML = precoBebida.replace('.', ',');
     tela.querySelector('.nome-sobremesa-confirmada').innerHTML = sobremesa;
-    tela.querySelector('.preco-sobremesa-confirmada').innerHTML = precoSobremesa;
+    tela.querySelector('.preco-sobremesa-confirmada').innerHTML = precoSobremesa.replace('.', ',');
+    tela.querySelector('.preco-confirmado').innerHTML = String(preco.toFixed(2)).replace('.', ',');
 }
-
 function cancelar() {
     const tela = document.querySelector('.confirmacao');
     tela.classList.add('escondido');
@@ -81,12 +82,13 @@ function cancelar() {
 function redirecionar() {
     let nome = prompt('Digite o seu nome: ');
     let endereco = prompt('Digite o seu endereço: ');
-    
+    let total = document.querySelector('.preco-confirmado').innerHTML;
+
     let msg = `Olá, gostaria de fazer o pedido:\n 
     - Prato: ${prato} \n 
     - Bebida: ${bebida} \n 
     - Sobremesa: ${sobremesa} \n 
-    Total: R$ 27,70 \n\n 
+    Total: R$ ${total} \n\n 
     Nome: ${nome} \n 
     Endereço: ${endereco}`;
 
