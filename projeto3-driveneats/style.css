@@ -142,9 +142,11 @@ footer {
 .rodape {
     margin: 15px 20px 15px 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.rodape button {
+.botao {
     height: 61px;
     border-radius: 50px;
     background-color: #CBCBCB;
@@ -157,14 +159,10 @@ footer {
     border: none;
 }
 
-.prato-selecionado {
+.selecionado {
     border: solid 4px green;
 }
 
-.bebida-selecionada {
-    border: solid 4px green;
-}
-
-.sobremesa-selecionada {
-    border: solid 4px green;
+.fechar-pedido {
+    background-color: #32B72F;
 }

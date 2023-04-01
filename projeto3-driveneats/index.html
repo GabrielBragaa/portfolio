@@ -30,8 +30,8 @@
             <div class="titulo">
                 Primeiro, seu prato
             </div>
-            <div class="caixas">
-                <div class="frango" onclick="selecionarPrato('.frango')">
+            <div class="caixas comes">
+                <div class="frango" onclick="selecionarPrato(this)">
                     <img src="imagens/frango_yin_yang.png" alt="frango_yin_yang">
                     <div class="nome">
                         Frango Yin Yang
@@ -40,10 +40,10 @@
                         Um pouco de batata, um pouco de salada
                     </div>
                     <div class="preco">
-                        R$ 14,90
+                        14,90
                     </div>
                 </div>
-                <div class="churras" onclick="selecionarPrato('.churras')">
+                <div class="churras" onclick="selecionarPrato(this)">
                     <img src="imagens/churrasco.jpeg" alt="churrasco">
                     <div class="nome">
                         Churrasco Misto
@@ -52,10 +52,10 @@
                         Com molho à campanha e farofa
                     </div>
                     <div class="preco">
-                        R$ 24,90
+                        24,90
                     </div>
                 </div>
-                <div class="peixe" onclick="selecionarPrato('.peixe')">
+                <div class="peixe" onclick="selecionarPrato(this)">
                     <img src="imagens/peixe.jpg" alt="peixe">
                     <div class="nome">
                         Filé de Tilápia
@@ -64,7 +64,7 @@
                         Com salada verde e um toque de limão
                     </div>
                     <div class="preco">
-                        R$ 19,90
+                        19,90
                     </div>
                 </div>
             </div>
@@ -73,8 +73,8 @@
             <div class="titulo">
                 Agora, sua bebida
             </div>
-            <div class="caixas">
-                <div class="coca" onclick="selecionarBebida('.coca')">
+            <div class="caixas bebes">
+                <div class="coca" onclick="selecionarBebida(this)">
                     <img src="imagens/coca-cola.png" alt="coca-cola">
                     <div class="nome">
                         Coquinha Gelada
@@ -83,10 +83,10 @@
                         Lata 350ml
                     </div>
                     <div class="preco">
-                        R$ 4,90
+                        4,90
                     </div>
                 </div>
-                <div class="suco" onclick="selecionarBebida('.suco')">
+                <div class="suco" onclick="selecionarBebida(this)">
                     <img src="imagens/suco.jpg" alt="suco">
                     <div class="nome">
                         Suquinho Gelado
@@ -95,10 +95,10 @@
                         Garrafa 1L
                     </div>
                     <div class="preco">
-                        R$ 6,90
+                        6,90
                     </div>
                 </div>
-                <div class="agua" onclick="selecionarBebida('.agua')">
+                <div class="agua" onclick="selecionarBebida(this)">
                     <img src="imagens/agua.jpg" alt="agua">
                     <div class="nome">
                         Aguinha Gelada
@@ -107,7 +107,7 @@
                         Garrafa 500ml
                     </div>
                     <div class="preco">
-                        R$ 2,00
+                        2,00
                     </div>
                 </div>
             </div>
@@ -116,8 +116,8 @@
             <div class="titulo">
                 Por fim, sua sobremesa
             </div>
-            <div class="caixas">
-                <div class="pudim" onclick="selecionarSobremesa('.pudim')">
+            <div class="caixas doces">
+                <div class="pudim" onclick="selecionarSobremesa(this)">
                     <img src="imagens/pudim.png" alt="pudim">
                     <div class="nome">
                         Pudim
@@ -126,10 +126,10 @@
                         Apenas pudim
                     </div>
                     <div class="preco">
-                        R$ 7,90
+                        7,90
                     </div>
                 </div>
-                <div class="mousse" onclick="selecionarSobremesa('.mousse')">
+                <div class="mousse" onclick="selecionarSobremesa(this)">
                     <img src="imagens/mousse.jpg" alt="mousse">
                     <div class="nome">
                         Mousse de Limão
@@ -138,10 +138,10 @@
                         Muuuito cremoso
                     </div>
                     <div class="preco">
-                        R$ 8,50
+                        8,50
                     </div>
                 </div>
-                <div class="pave" onclick="selecionarSobremesa('.pave')">
+                <div class="pave" onclick="selecionarSobremesa(this)">
                     <img src="imagens/pave.jpg" alt="pave">
                     <div class="nome">
                         Pavê de Chocolate
@@ -150,7 +150,7 @@
                         Esse é pa comer
                     </div>
                     <div class="preco">
-                        R$ 8,90
+                        8,90
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@
     </section>
     <footer>
         <div class="rodape">
-            <button disabled id="botao">Selecione os 3 itens para fechar o pedido</button>
+            <button disabled class="botao">Selecione os 3 itens para fechar o pedido</button>
         </div>
     </footer>
 

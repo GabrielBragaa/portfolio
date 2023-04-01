@@ -1,41 +1,62 @@
-let prato;
-let bebida;
-let sobremesa;
+let prato, precoPrato, bebida, precoBebida, sobremesa, precoSobremesa, precoTotal;
 
 
 function selecionarPrato(seletor) {
-    const opcaoAtualPrato = document.querySelector(seletor);
-    const opcaoAnteriorPrato = document.querySelector('.prato-selecionado');
+    const opcaoAtualPrato = seletor;
+    const opcaoAnteriorPrato = document.querySelector('.comes .selecionado');
     if (opcaoAnteriorPrato !== null) {
         if (opcaoAtualPrato !== opcaoAnteriorPrato)
-            opcaoAnteriorPrato.classList.remove('prato-selecionado');
+            opcaoAnteriorPrato.classList.remove('selecionado');
     }
-    document.querySelector(seletor).classList.toggle('prato-selecionado');
+    seletor.classList.toggle('selecionado');
+    
+
+    prato = seletor.querySelector('.nome').innerHTML;
+    precoPrato = seletor.querySelector('.preco').innerHTML;
+    console.log(prato, precoPrato);
+    verificaSelecao();
 }
-
-
-
 
 function selecionarBebida(seletor) {
-    const opcaoAtualBebida = document.querySelector(seletor);
-    const opcaoAnteriorBebida = document.querySelector('.bebida-selecionada');
+    const opcaoAtualBebida = seletor;
+    const opcaoAnteriorBebida = document.querySelector('.bebes .selecionado');
     if (opcaoAnteriorBebida !== null) {
         if (opcaoAtualBebida !== opcaoAnteriorBebida) {    
-            opcaoAnteriorBebida.classList.remove('bebida-selecionada');
+            opcaoAnteriorBebida.classList.remove('selecionado');
         }
     }
-    document.querySelector(seletor).classList.toggle('bebida-selecionada');
+    seletor.classList.toggle('selecionado');
+
+    bebida = seletor.querySelector('.nome').innerHTML;
+    precoBebida = seletor.querySelector('.preco').innerHTML;
+    console.log(bebida, precoBebida);
+    verificaSelecao();
 }
 
-
 function selecionarSobremesa(seletor) {
-    const opcaoAtualSobremesa = document.querySelector(seletor);
-    const opcaoAnteriorSobremesa = document.querySelector('.sobremesa-selecionada');
+    const opcaoAtualSobremesa = seletor;
+    const opcaoAnteriorSobremesa = document.querySelector('.doces .selecionado');
     if (opcaoAnteriorSobremesa !== null) {
         if (opcaoAtualSobremesa !== opcaoAnteriorSobremesa) {
-            opcaoAnteriorSobremesa.classList.remove('sobremesa-selecionada');
+            opcaoAnteriorSobremesa.classList.remove('selecionado');
         }
     }
-    document.querySelector(seletor).classList.toggle("sobremesa-selecionada");
+    seletor.classList.toggle('selecionado');
 
+    sobremesa = seletor.querySelector('.nome').innerHTML;
+    precoSobremesa = seletor.querySelector('.preco').innerHTML;
+    console.log(sobremesa, precoSobremesa);
+    verificaSelecao();
+}
+
+function verificaSelecao() {
+    if (prato !== undefined) {
+        if (bebida !== undefined) {
+            if (sobremesa !== undefined) {
+                const botaoPedido = document.querySelector('.botao');
+                botaoPedido.innerHTML = 'Fechar pedido';
+                botaoPedido.classList.add('fechar-pedido');
+            } 
+        }
+    }
 }
