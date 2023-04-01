@@ -156,28 +156,30 @@
             </div>
         </section>
     </section>
-    <div class="confirmacao escondido">
-        <p class="paragrafo-confirma">Confirme seu pedido</p>
-        <div class="info-confirmacao">
-            <div class="prato-confirmado">
-                <div class="nome-prato-confirmado"></div>
-                <div class="preco-prato-confirmado"></div>
-            </div>
-            <div class="bebida-confirmada">
+    <div class="tela-branca escondido">    
+        <div class="confirmacao escondido">
+            <p class="paragrafo-confirma">Confirme seu pedido</p>
+            <div class="info-confirmacao">
+                <div class="prato-confirmado">
+                    <div class="nome-prato-confirmado"></div>
+                    <div class="preco-prato-confirmado"></div>
+                </div>
+                <div class="bebida-confirmada">
                 <p class="nome-bebida-confirmada"></p>
                 <p class="preco-bebida-confirmada"></p>
-            </div>
-            <div class="sobremesa-confirmada">
+                </div>
+                <div class="sobremesa-confirmada">
                 <p class="nome-sobremesa-confirmada"></p>
                 <p class="preco-sobremesa-confirmada"></p>
+                </div>
+                <div class="total-pedido">
+                    <p>TOTAL</p>
+                    <p class="preco-confirmado">R$ </p>
+                </div>
             </div>
-            <div class="total-pedido">
-                <p>TOTAL</p>
-                <p class="preco-confirmado">R$ </p>
-            </div>
+            <button class="tudo-certo" onclick="redirecionar()">Tudo certo, pode pedir!</button>
+            <p class="cancelar" onclick="cancelar()">Cancelar</p>
         </div>
-        <button class="tudo-certo" onclick="redirecionar()">Tudo certo, pode pedir!</button>
-        <p class="cancelar" onclick="cancelar()">Cancelar</p>
     </div>
     <footer>
         <div class="rodape">

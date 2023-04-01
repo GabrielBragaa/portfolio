@@ -65,6 +65,10 @@ function selecionarSobremesa(seletor) {
 function confirmar() {
     const preco = Number(precoPrato) + Number(precoBebida) + Number(precoSobremesa);
     const tela = document.querySelector('.confirmacao');
+    const corpo = document.querySelector('body');
+    const telaBranca = document.querySelector('.tela-branca');
+    telaBranca.classList.remove('escondido');
+    corpo.classList.add('no-scroll');
     tela.classList.remove('escondido');
     tela.querySelector('.nome-prato-confirmado').innerHTML = prato;
     tela.querySelector('.preco-prato-confirmado').innerHTML = precoPrato.replace('.', ',');
@@ -77,6 +81,10 @@ function confirmar() {
 function cancelar() {
     const tela = document.querySelector('.confirmacao');
     tela.classList.add('escondido');
+    const corpo = document.querySelector('body');
+    corpo.classList.remove('no-scroll');
+    const telaBranca = document.querySelector('.tela-branca');
+    telaBranca.classList.add('escondido');
 }
 
 function redirecionar() {
