@@ -82,7 +82,13 @@ function redirecionar() {
     let nome = prompt('Digite o seu nome: ');
     let endereco = prompt('Digite o seu endereço: ');
     
-    let msg = `Olá, gostaria de fazer o pedido:\n - Prato:${prato} - Bebida: ${bebida} \n - Sobremesa: ${sobremesa} \n Total: R$ 27,70 \n\n Nome: ${nome} \n Endereço: ${endereco}`;
+    let msg = `Olá, gostaria de fazer o pedido:\n 
+    - Prato: ${prato} \n 
+    - Bebida: ${bebida} \n 
+    - Sobremesa: ${sobremesa} \n 
+    Total: R$ 27,70 \n\n 
+    Nome: ${nome} \n 
+    Endereço: ${endereco}`;
 
     let num = "55021981199598"
 
