@@ -17,12 +17,18 @@ function verificaSelecao() {
 function selecionarPrato(seletor) {
     const opcaoAtualPrato = seletor;
     const opcaoAnteriorPrato = document.querySelector('.comes .selecionado');
+    const check = seletor.querySelector('.check');
     if (opcaoAnteriorPrato !== null) {
-        if (opcaoAtualPrato !== opcaoAnteriorPrato)
+        const checkAnterior = opcaoAnteriorPrato.querySelector('.check');
+        if (opcaoAtualPrato !== opcaoAnteriorPrato) {
             opcaoAnteriorPrato.classList.remove('selecionado');
+        }
+        checkAnterior.classList.toggle('escondido'); 
     }
     seletor.classList.toggle('selecionado');
-    
+    if (seletor.classList.contains('selecionado') == true) {
+        check.classList.toggle('escondido');
+    }
 
     prato = seletor.querySelector('.nome').innerHTML;
     const preco = seletor.querySelector('.preco').innerHTML;
@@ -33,12 +39,18 @@ function selecionarPrato(seletor) {
 function selecionarBebida(seletor) {
     const opcaoAtualBebida = seletor;
     const opcaoAnteriorBebida = document.querySelector('.bebes .selecionado');
+    const check = seletor.querySelector('.check');
     if (opcaoAnteriorBebida !== null) {
-        if (opcaoAtualBebida !== opcaoAnteriorBebida) {    
+        const checkAnterior = opcaoAnteriorBebida.querySelector('.check');
+        if (opcaoAtualBebida !== opcaoAnteriorBebida) {
             opcaoAnteriorBebida.classList.remove('selecionado');
         }
+        checkAnterior.classList.toggle('escondido');
     }
     seletor.classList.toggle('selecionado');
+    if (seletor.classList.contains('selecionado') == true) {
+        check.classList.toggle('escondido');
+    }
 
     bebida = seletor.querySelector('.nome').innerHTML;
     const preco = seletor.querySelector('.preco').innerHTML;
@@ -49,12 +61,18 @@ function selecionarBebida(seletor) {
 function selecionarSobremesa(seletor) {
     const opcaoAtualSobremesa = seletor;
     const opcaoAnteriorSobremesa = document.querySelector('.doces .selecionado');
+    const check = seletor.querySelector('.check');
     if (opcaoAnteriorSobremesa !== null) {
+        const checkAnterior = opcaoAnteriorSobremesa.querySelector('.check');
         if (opcaoAtualSobremesa !== opcaoAnteriorSobremesa) {
             opcaoAnteriorSobremesa.classList.remove('selecionado');
         }
+        checkAnterior.classList.toggle('escondido');
     }
     seletor.classList.toggle('selecionado');
+    if (seletor.classList.contains('selecionado') == true) {
+        check.classList.toggle('escondido');
+    }
 
     sobremesa = seletor.querySelector('.nome').innerHTML;
     const preco = seletor.querySelector('.preco').innerHTML;

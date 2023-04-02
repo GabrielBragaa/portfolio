@@ -258,3 +258,10 @@ footer {
     top: 0;
     left: 0;
 }
+
+ion-icon {
+    font-size: 18px;
+    color: #32B72F;
+    position: relative;
+    left: 128px;
+}
